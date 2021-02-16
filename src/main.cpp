@@ -1,9 +1,9 @@
 /**
  * @file main.cpp
- * @brief This is a demo of making a singly linked list
+ * @brief Linked List Demo
  * @details Based on ODS book examples
- * @author Seth McNeill
- * @date 2021 February 08
+ * @author Brandon Yi
+ * @date 2021 February 15
  * 
  */
 
@@ -48,7 +48,7 @@ public:
             head = newNode;
             tail = newNode;
         } else {
-            tail->nextNode = newNode; // update the last node's next node to newNode
+            tail-> nextNode = newNode; // update the last node's next node to newNode
             tail = newNode; // update the tail pointer to newNode
         }
         n++;
@@ -111,20 +111,20 @@ public:
             return(true);
         }
      }
-
+     
     /**
-     * Removes the head node and returns the data value from the removed node
+     * Removes the tail node and returns the data value from the removed node
      * 
      * @param d pointer to integer to return value
      * @returns true if successful
      */
-    bool removeHead(int &d) {
+    bool removeTail(int &d) {
         int val;
         Node* old; // save off the old node
-        if(head != NULL) {
-            val = head->data; // collect the data from node to be removed
-            old = head; // save off pointer to node we are removing
-            head = head->nextNode; // update head to new node
+        if(tail != NULL) {
+            val = tail->data; // collect the data from node to be removed
+            old = tail; // save off pointer to node we are removing
+            tail = tail->nextNode; // update head to new node
             delete old; // release the memory from the removed node
             n--; // decrement n to show shorter list
             d = val;
@@ -176,52 +176,56 @@ int main(int, char**) {
     cout << "get(7) = " << myList.get(7) << endl;
     cout << "get(-3) = " << myList.get(-3) << endl;
 
-    myList.addMiddle(3,10);
+    myList.addMiddle(4,6);
     myList.printList();
-    myList.addMiddle(3,11);
+    myList.addMiddle(5,7);
     myList.printList();
-    myList.addMiddle(6,12);
+    myList.addMiddle(6,8);
     myList.printList();
-    myList.addMiddle(0,13);
+    myList.addMiddle(7,9);
+    myList.printList();
+    myList.addMiddle(8,10);
+    myList.printList();
+    myList.addMiddle(9,11);
     myList.printList();
 
-
-    if(myList.removeHead(retData))
+    
+    if(myList.removeTail(retData))
         cout << "Removed " << retData << endl;
     else
         cout << "list was empty" << endl;
     myList.printList();
-    if(myList.removeHead(retData))
+    if(myList.removeTail(retData))
         cout << "Removed " << retData << endl;
     else
         cout << "list was empty" << endl;
     myList.printList();
-    if(myList.removeHead(retData))
+    if(myList.removeTail(retData))
         cout << "Removed " << retData << endl;
     else
         cout << "list was empty" << endl;
     myList.printList();
-    if(myList.removeHead(retData))
+    if(myList.removeTail(retData))
         cout << "Removed " << retData << endl;
     else
         cout << "list was empty" << endl;
     myList.printList();
-    if(myList.removeHead(retData))
+    if(myList.removeTail(retData))
         cout << "Removed " << retData << endl;
     else
         cout << "list was empty" << endl;
     myList.printList();
-    if(myList.removeHead(retData))
+    if(myList.removeTail(retData))
         cout << "Removed " << retData << endl;
     else
         cout << "list was empty" << endl;
     myList.printList();
-    if(myList.removeHead(retData))
+    if(myList.removeTail(retData))
         cout << "Removed " << retData << endl;
     else
         cout << "list was empty" << endl;
     myList.printList();
-    if(myList.removeHead(retData))
+    if(myList.removeTail(retData))
         cout << "Removed " << retData << endl;
     else
         cout << "list was empty" << endl;

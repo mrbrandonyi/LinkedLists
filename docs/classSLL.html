@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Class Demo Singly Linked List: SLL Class Reference</title>
+<title>Linked Lists: SLL Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Class Demo Singly Linked List
+   <div id="projectname">Linked Lists
    &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
@@ -90,8 +90,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4b13e952ebe77ae22fbb88586bc2ce0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6961bd8b56468751ee3a29a0fe58a5bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSLL.html#a6961bd8b56468751ee3a29a0fe58a5bf">addMiddle</a> (int ii, int d)</td></tr>
 <tr class="separator:a6961bd8b56468751ee3a29a0fe58a5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf4a273aa216c8309db8c550783af370"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSLL.html#abf4a273aa216c8309db8c550783af370">removeHead</a> (int &amp;d)</td></tr>
-<tr class="separator:abf4a273aa216c8309db8c550783af370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28f1159a976b3d9584a72f4d6730d4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSLL.html#aa28f1159a976b3d9584a72f4d6730d4e">removeTail</a> (int &amp;d)</td></tr>
+<tr class="separator:aa28f1159a976b3d9584a72f4d6730d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af040cdc4c562e38d8292430576e7b240"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSLL.html#af040cdc4c562e38d8292430576e7b240">printList</a> ()</td></tr>
 <tr class="separator:af040cdc4c562e38d8292430576e7b240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -245,7 +245,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="classSLL.html#aba913019217721f1a3b55d68f715919d">head</a> = newNode;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="classSLL.html#a7d9ec4ffde957ed81df73cc6826e1303">tail</a> = newNode;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="classSLL.html#a7d9ec4ffde957ed81df73cc6826e1303">tail</a>-&gt;<a class="code" href="classNode.html#ae64451cd6c118b6fe8369cb36bc9af06">nextNode</a> = newNode; <span class="comment">// update the last node&#39;s next node to newNode</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="classSLL.html#a7d9ec4ffde957ed81df73cc6826e1303">tail</a>-&gt; nextNode = newNode; <span class="comment">// update the last node&#39;s next node to newNode</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="classSLL.html#a7d9ec4ffde957ed81df73cc6826e1303">tail</a> = newNode; <span class="comment">// update the tail pointer to newNode</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classSLL.html#a8da2544f8edd22e4b58161a7e3e81976">n</a>++;</div>
@@ -350,8 +350,8 @@ Public Attributes</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="abf4a273aa216c8309db8c550783af370"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf4a273aa216c8309db8c550783af370">&#9670;&nbsp;</a></span>removeHead()</h2>
+<a id="aa28f1159a976b3d9584a72f4d6730d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28f1159a976b3d9584a72f4d6730d4e">&#9670;&nbsp;</a></span>removeTail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -360,7 +360,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool SLL::removeHead </td>
+          <td class="memname">bool SLL::removeTail </td>
           <td>(</td>
           <td class="paramtype">int &amp;&#160;</td>
           <td class="paramname"><em>d</em></td><td>)</td>
@@ -373,7 +373,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Removes the head node and returns the data value from the removed node</p>
+<p>Removes the tail node and returns the data value from the removed node</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">d</td><td>pointer to integer to return value </td></tr>
@@ -386,10 +386,10 @@ Public Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                            {</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">int</span> val;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="classNode.html">Node</a>* old; <span class="comment">// save off the old node</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classSLL.html#aba913019217721f1a3b55d68f715919d">head</a> != NULL) {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            val = <a class="code" href="classSLL.html#aba913019217721f1a3b55d68f715919d">head</a>-&gt;<a class="code" href="classNode.html#a87c003c9f600e3fc58e6e90835f0b605">data</a>; <span class="comment">// collect the data from node to be removed</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            old = <a class="code" href="classSLL.html#aba913019217721f1a3b55d68f715919d">head</a>; <span class="comment">// save off pointer to node we are removing</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="classSLL.html#aba913019217721f1a3b55d68f715919d">head</a> = <a class="code" href="classSLL.html#aba913019217721f1a3b55d68f715919d">head</a>-&gt;<a class="code" href="classNode.html#ae64451cd6c118b6fe8369cb36bc9af06">nextNode</a>; <span class="comment">// update head to new node</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classSLL.html#a7d9ec4ffde957ed81df73cc6826e1303">tail</a> != NULL) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            val = <a class="code" href="classSLL.html#a7d9ec4ffde957ed81df73cc6826e1303">tail</a>-&gt;<a class="code" href="classNode.html#a87c003c9f600e3fc58e6e90835f0b605">data</a>; <span class="comment">// collect the data from node to be removed</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            old = <a class="code" href="classSLL.html#a7d9ec4ffde957ed81df73cc6826e1303">tail</a>; <span class="comment">// save off pointer to node we are removing</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="classSLL.html#a7d9ec4ffde957ed81df73cc6826e1303">tail</a> = <a class="code" href="classSLL.html#a7d9ec4ffde957ed81df73cc6826e1303">tail</a>-&gt;<a class="code" href="classNode.html#ae64451cd6c118b6fe8369cb36bc9af06">nextNode</a>; <span class="comment">// update head to new node</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keyword">delete</span> old; <span class="comment">// release the memory from the removed node</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <a class="code" href="classSLL.html#a8da2544f8edd22e4b58161a7e3e81976">n</a>--; <span class="comment">// decrement n to show shorter list</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            d = val;</div>

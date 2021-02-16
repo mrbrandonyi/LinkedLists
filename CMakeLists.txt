@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project("Class Demo Singly Linked List" VERSION 0.1.0)
+project("Linked Lists" VERSION 0.1.0)
 
 set(PROJECT_SOURCE_DIR "src")
 set(DOXYGEN_OUPUT_DIR "doxygen")
